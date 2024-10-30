@@ -1,0 +1,183 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center wrapper for heading and slider */
+.content-wrapper {
+    text-align: center;
+}
+
+/* Heading styling */
+.main-heading {
+    /* text-align: center; */
+    color: #FFF8E8;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px; /* Space below heading */
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #6C4E31;
+}
+
+.slider-container {
+    width: 800px;
+    height: 600px;
+    position: relative;
+    background-color: #FFEAC5; /* Rounded corner box color */
+    border-radius: 15px; /* Rounded corners */
+    padding: 15px; /* Padding inside the box */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for effect */
+    overflow: hidden; /* Ensures that any overflowed parts are hidden */
+}
+
+/* Main Slider */
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slides {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.slide {
+    min-width: 100%;
+    display: none;
+    position: relative;
+}
+
+.slide img {
+    width: 775px;
+    height: 525px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.fade {
+    opacity: 0;
+    transition: opacity 0.8s;
+}
+
+.fade.show {
+    display: block;
+    opacity: 1;
+}
+
+/* .caption, .description {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+} */
+
+/* Caption styling */
+.caption {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.6); /* Black translucent background */
+    padding: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Description styling */
+.description {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.description {
+    font-size: 12px;
+    bottom: 5px;
+}
+
+/* Thumbnail Navigation */
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.thumbnails img {
+    width: 60px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.thumbnails img:hover {
+    transform: scale(1.1);
+}
+
+/* Active thumbnail styling */
+.active-thumbnail {
+    border: 3px solid #603F26; /* Border color for active thumbnail */
+    border-radius: 5px; /* Rounded corners */
+    padding: 2px; /* Space around thumbnail image */
+    box-sizing: border-box;
+}
+
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Responsive Styling */
+@media (max-width: 600px) {
+    .caption {
+        font-size: 14px;
+    }
+    
+    .thumbnails img {
+        width: 40px;
+    }
+}

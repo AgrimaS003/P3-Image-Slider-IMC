@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- Heading -->
+        <h1 class="main-heading">Top 10 Museums of the World</h1>
+
+        <div class="slider-container">
+            <!-- Main Image Display -->
+            <div class="slider">
+                <div class="slides">
+                    <!-- Repeat this structure for each of the 10 images -->
+                    <div class="slide fade">
+                        <img src="imgs/img1.jpg" alt="The Louvre, France">
+                        <div class="caption">The Louvre, France</div>
+                        <div class="description">The Louvre Museum, located in Paris, France, is a world-renowned art museum housing over 380,000 objects, including iconic works like the Mona Lisa and the Venus de Milo. Once a royal palace, its impressive architecture and extensive collection make it a top tourist destination.</div>
+                    </div>
+                    <div class="slide fade">
+                        <img src="imgs/img2.jpg" alt="Smithsonian National Air and Space Museum, USA">
+                        <div class="caption">Smithsonian National Air and Space Museum, USA</div>
+                        <div class="description">The Smithsonian National Air and Space Museum showcases the history of aviation and space exploration through its impressive collection of aircraft, spacecraft, and artifacts, including the original Wright Brothers' plane and the Apollo 11 command module. Visitors can also enjoy unique experiences in the planetarium and IMAX theater.</div>
+                    </div>
+                    <div class="slide fade">
+                        <img src="imgs/img3.jpg" alt="British Museum, England">
+                        <div class="caption">British Museum, England</div>
+                        <div class="description">The British Museum, one of the world's largest museums, boasts over eight million objects that encompass human history and culture across all continents, including iconic artifacts like the Rosetta Stone and ancient Egyptian mummies. Admission is free, and visitors can also access its extensive research library.</div>
+                    </div>
+                    <div class="slide fade">
+                        <img src="imgs/img4.jpg" alt="Vatican Museums, Vatican City">
+                        <div class="caption">Vatican Museums, Vatican City</div>
+                        <div class="description">The Vatican Museums in Vatican City showcase a vast collection of art and artifacts amassed by the Popes over centuries, featuring masterpieces like Michelangelo's Sistine Chapel ceiling and Raphael's Rooms. The collection also includes classical sculptures, tapestries, and works from ancient Egypt, Greece, and the early Christian era.</div>
+                    </div>
+                    <div class="slide fade">
+                        <img src="imgs/img5.jpg" alt="The Metropolitan Museum of Art, USA">
+                        <div class="caption">The Metropolitan Museum of Art, USA</div>
+                        <div class="description">The Metropolitan Museum of Art in New York City is one of the largest and most prestigious art museums globally, featuring over two million artworks spanning 5,000 years of history. It is especially celebrated for its collection of European paintings, including masterpieces by Rembrandt, Vermeer, and Van Gogh.</div>
+                    </div>
+                    <div class="slide fade">
+                        <img src="imgs/img6.jpg" alt="State Hermitage Museum, Russia">
+                        <div class="caption">State Hermitage Museum, Russia</div>
+                        <div class="description">The State Hermitage Museum in St. Petersburg, Russia, is one of the world's largest art museums, housing over three million works spanning ancient to modern times. Located in a former imperial palace, it features over 1,000 rooms, including the Winter Palace and various Hermitage sections.</div>
+                    </div>
+                    <div class="slide fade">
+                        <img src="imgs/img7.jpg" alt="Prado Museum, Spain">
+                        <div class="caption">Prado Museum, Spain</div>
+                        <div class="description">The Prado Museum in Madrid, Spain, is a world-renowned art museum boasting over 20,000 works, primarily showcasing European art from the 12th to the 20th century. Its collection features masterpieces by legendary artists like Diego Velázquez, Francisco de Goya, and El Greco, alongside works by Flemish, Dutch, Italian, French, and German masters.</div>
+                    </div>
+                    <div class="slide fade">
+                        <img src="imgs/img8.jpg" alt="National Museum of China, China">
+                        <div class="caption">National Museum of China, China</div>
+                        <div class="description">The National Museum of China in Beijing is one of the largest museums in the country, showcasing over one million artifacts that span from prehistoric times to the present day. Its diverse exhibitions feature rare cultural relics, ancient porcelain, calligraphy, jade, and traditional Chinese medicine, reflecting the rich history and culture of China.</div>
+                    </div>
+                    <div class="slide fade">
+                        <img src="imgs/img9.jpg" alt="Egyptian Museum, Egypt">
+                        <div class="caption">Egyptian Museum, Egypt</div>
+                        <div class="description">The Egyptian Museum in Cairo is a premier institution showcasing over 120,000 artifacts from ancient Egypt, including rare pharaonic antiques and treasures from King Tutankhamun's tomb. Visitors can explore numerous galleries highlighting the rich art, culture, and architecture of this remarkable civilization.</div>
+                    </div>
+                    <div class="slide fade">
+                        <img src="imgs/img10.jpg" alt="Tokyo National Museum, Japan">
+                        <div class="caption">Tokyo National Museum, Japan</div>
+                        <div class="description">The Tokyo National Museum, located in the heart of Tokyo, is one of Japan's largest museums, showcasing over 110,000 objects that highlight Japanese art and cultural artifacts from ancient to modern times. Its impressive exhibits include significant collections of Buddhist art, ceramics, textiles, and samurai armor and swords, with a focus on the Heian and Kamakura periods.</div>
+                    </div>
+
+                    <!-- Repeat similar divs for all other images -->
+                </div>
+                <!-- Navigation controls -->
+                <button class="prev" onclick="prevSlide()">&#10094;</button>
+                <button class="next" onclick="nextSlide()">&#10095;</button>
+            </div>
+
+            <!-- Thumbnail Navigation -->
+            <div class="thumbnails">
+                <!-- Thumbnail Images (clickable) -->
+                <img src="imgs/img1.jpg" onclick="showSlide(0)" alt="The Louvre, France">
+                <img src="imgs/img2.jpg" onclick="showSlide(1)" alt="Smithsonian National Air and Space Museum, USA">
+                <img src="imgs/img3.jpg" onclick="showSlide(2)" alt="British Museum, England">
+                <img src="imgs/img4.jpg" onclick="showSlide(3)" alt="Vatican Museums, Vatican City">
+                <img src="imgs/img5.jpg" onclick="showSlide(4)" alt="The Metropolitan Museum of Art, USA">
+                <img src="imgs/img6.jpg" onclick="showSlide(5)" alt="State Hermitage Museum, Russia">
+                <img src="imgs/img7.jpg" onclick="showSlide(6)" alt="Prado Museum, Spain">
+                <img src="imgs/img8.jpg" onclick="showSlide(7)" alt="National Museum of China, China">
+                <img src="imgs/img9.jpg" onclick="showSlide(8)" alt="Egyptian Museum, Egypt">
+                <img src="imgs/img10.jpg" onclick="showSlide(9)" alt="Tokyo National Museum, Japan">
+                <!-- Repeat for all other thumbnails -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
